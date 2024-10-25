@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Inicio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="MarcoDelTrabajo.html" id="marcoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Marco del trabajo
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="marcoDropdown">
+            <li><a class="dropdown-item" href="MarcoDelTrabajo.html#descripción">Descripción</a></li>
+            <li><a class="dropdown-item" href="MarcoDelTrabajo.html#objetivos">Objetivos</a></li>
+            <li><a class="dropdown-item" href="MarcoDelTrabajo.html#alcance">Alcance</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="AnalisisEstructurado.html" id="marcoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Análisis Estructurado
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="marcoDropdown">
+            <li><a class="dropdown-item" href="AnalisisEstructurado.html">Modelo Esencial</a></li>
+            <li><a class="dropdown-item" href="AnalisisEstructurado.html">Modelo de Implementacion</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="OrientadoaObjetos.html" id="marcoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Orientado a Objetos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="marcoDropdown">
+            <li><a class="dropdown-item" href="OrientadoaObjetos.html">Clases y Objetos</a></li>
+            <li><a class="dropdown-item" href="OrientadoaObjetos.html">Diagrama de Clases</a></li>
+            <li><a class="dropdown-item" href="OrientadoaObjetos.html">Casos de Uso</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="Herramientas.html" id="marcoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Herramientas
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="marcoDropdown">
+            <li><a class="dropdown-item" href="Herramientas.html">Video</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div> 
+  </div>
+</nav>
+<!-- Sección Inicio -->
+<section id="modelo-esencial" class="container my-5">
+    <h2>Modelo Esencial</h2>
+    
+    <div id="" class="mt-4">
+      <p>Pequeña descripcion</p>
+    </div>
+</section>
+<section id="modelo-ambiental" class="container my-5">
+    <h2>Modelo Ambiental</h2>
+    
+    <div id="propositos" class="mt-4">
+      <h3>Declaraciones de Propósitos</h3>
+      <p>El sistema de gestión de bibliotecas tiene como propósito mejorar la eficiencia en la administración de recursos bibliográficos, facilitando el proceso de préstamo y devolución de libros, permitiendo una gestión de inventario en tiempo real y asegurando un acceso ágil a la información para usuarios y bibliotecarios.</p>
+      <ul>
+        <li>Optimizar la administración de libros y usuarios.</li>
+        <li>Facilitar el préstamo y devolución de libros.</li>
+        <li>Permitir el acceso rápido a la información sobre disponibilidad de libros.</li>
+        <li>Registrar usuarios y gestionar sus préstamos de manera efectiva.</li>
+      </ul>
+    </div>
+    <div id="diagrama-contexto" class="mt-4">
+        <h3>Diagrama de Contexto</h3>
+        <p>El diagrama de contexto muestra las interacciones del sistema con las entidades externas. En este caso, el sistema de biblioteca interactúa con usuarios, bibliotecarios y otros sistemas relacionados (por ejemplo, sistemas de proveedores de libros).</p>
+    </div>
+    <div id="imagen-diagrama" class="mt-4">
+        <h3>Imagen del Diagrama</h3>
+        <img src="ruta-a-tu-diagrama.png" alt="Diagrama de Contexto de la Biblioteca" class="img-fluid">
+    </div>
+    <div id="lista-acontecimientos" class="mt-4">
+        <h3>Lista de Acontecimientos</h3>
+        <ul>
+          <li>Un usuario solicita un libro.</li>
+          <li>El bibliotecario confirma el préstamo.</li>
+          <li>El usuario devuelve el libro.</li>
+          <li>El bibliotecario registra la devolución.</li>
+          <li>Un nuevo usuario se registra en el sistema.</li>
+        </ul>
+      </div>    
+</section>
+
+<section id="modelo-comportamiento" class="container my-5">
+    <h2>Modelo de Comportamiento</h2>
+    
+    <div id="dfd" class="mt-4">
+      <h3>Diagrama de Flujo de Datos (DFD)</h3>
+      <p>El Diagrama de Flujo de Datos (DFD) representa cómo los datos se mueven entre los diferentes procesos del sistema de biblioteca. Los principales flujos incluyen el registro de usuarios, la solicitud de préstamos y la devolución de libros.</p>
+      <ul>
+        <li><strong>Entrada:</strong> Un usuario solicita un libro.</li>
+        <li><strong>Proceso:</strong> El bibliotecario procesa la solicitud y registra el préstamo en el sistema.</li>
+        <li><strong>Salida:</strong> El sistema actualiza la disponibilidad del libro y asigna el préstamo al usuario.</li>
+      </ul>
+    </div>
+    <div id="er-diagrama" class="mt-4">
+        <h3>Diagrama Entidad-Relación (ERD)</h3>
+        <p>El Diagrama Entidad-Relación (ERD) muestra las entidades clave del sistema de biblioteca y sus relaciones. Las principales entidades son:</p>
+        <ul>
+          <li><strong>Usuario</strong>: Representa a la persona que utiliza el sistema, con atributos como nombre, dirección y número de usuario.</li>
+          <li><strong>Libro</strong>: Contiene los detalles del libro, como título, autor, ISBN y estado de disponibilidad.</li>
+          <li><strong>Préstamo</strong>: Una relación que conecta a un usuario con un libro prestado. Contiene atributos como la fecha de préstamo y la fecha de devolución esperada.</li>
+        </ul>
+    </div>
+    <div id="diccionario-datos" class="mt-4">
+        <h3>Diccionario de Datos</h3>
+        <p>El diccionario de datos describe los principales campos y entidades que se utilizan en el sistema de biblioteca:</p>
+        <ul>
+          <li><strong>Usuario</strong>: Persona que utiliza el sistema. Campos: nombre, dirección, teléfono, correo electrónico, número de usuario.</li>
+          <li><strong>Libro</strong>: Detalles de los libros disponibles en la biblioteca. Campos: título, autor, ISBN, categoría, estado (disponible, prestado).</li>
+          <li><strong>Préstamo</strong>: Información sobre los libros prestados. Campos: usuario, libro, fecha de préstamo, fecha de devolución esperada, fecha de devolución real.</li>
+          <li><strong>Bibliotecario</strong>: Usuario del sistema con permisos administrativos para gestionar préstamos y devoluciones.</li>
+        </ul>
+      </div>
+  </section>
+
+ 
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+<p>Hecho por</p>
+</footer>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+</body>
+</html>
