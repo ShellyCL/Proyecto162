@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="estilos/estilo1.css">    
     <title>Document</title>
 </head>
-<body>
+<body class="BodyMarco">
 <!-- Navbar -->
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html">Inicio</a>
@@ -34,8 +33,8 @@
             Análisis Estructurado
           </a>
           <ul class="dropdown-menu" aria-labelledby="marcoDropdown">
-            <li><a class="dropdown-item" href="AnalisisEstructurado.html">Modelo Esencial</a></li>
-            <li><a class="dropdown-item" href="AnalisisEstructurado.html">Modelo de Implementacion</a></li>
+            <li><a class="dropdown-item" href="AnalisisEstructurado.html">Modelo Ambiental</a></li>
+            <li><a class="dropdown-item" href="ModeloDeComportamiento.html">Modelo de Comportamiento</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -43,9 +42,9 @@
             Orientado a Objetos
           </a>
           <ul class="dropdown-menu" aria-labelledby="marcoDropdown">
-            <li><a class="dropdown-item" href="OrientadoaObjetos.html">Clases y Objetos</a></li>
             <li><a class="dropdown-item" href="OrientadoaObjetos.html">Diagrama de Clases</a></li>
-            <li><a class="dropdown-item" href="OrientadoaObjetos.html">Casos de Uso</a></li>
+            <li><a class="dropdown-item" href="OrientadoaObjetos.html#clases">Clases y Objetos</a></li>
+            <li><a class="dropdown-item" href="CasosDeUso.html">Casos de Uso</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -56,40 +55,87 @@
             <li><a class="dropdown-item" href="Herramientas.html">Video</a></li>
           </ul>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="Herramientas.html" id="marcoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Conclusiones y recomendaciones
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="marcoDropdown">
+            <li><a class="dropdown-item" href="ConclusionyR.html#Conclu">Conclusión</a></li>
+            <li><a class="dropdown-item" href="ConclusionyR.html#reco">Recomendación</a></li>
+          </ul>
+        </li>
       </ul>
     </div> 
   </div>
 </nav>
 <!-- Sección Marco del trabajo -->
 <section id="marco-del-trabajo" class="container my-5">
-    <h2>Marco del trabajo</h2>
-    <p>En esta sección encontrarás una descripción detallada del proyecto, sus objetivos, y el alcance que tendrá en el sistema de biblioteca.</p>
-  
-    <div id="descripcion" class="mt-4">
-      <h3>Descripción</h3>
-      <p>Este proyecto tiene como objetivo desarrollar un sistema de gestión de bibliotecas que facilite el registro, préstamo y administración de libros, proporcionando un acceso eficiente a la información bibliográfica.</p>
-    </div>
-  
-    <div id="objetivos" class="mt-4">
-      <h3>Objetivos</h3>
+  <div class="class-box mb-4">
+    <h2 class="section-heading">Marco del Trabajo</h2>
+    <p>
+        Este proyecto surge con el propósito de abordar las necesidades críticas en la gestión y administración de bibliotecas, tales como el manejo de inventarios, la búsqueda eficiente de información y la mejora en la experiencia del usuario. Con base en principios de análisis y diseño de sistemas, se desarrolla un modelo funcional que no solo automatiza procesos sino que también establece un marco para la toma de decisiones estratégicas en el contexto bibliotecario.
+    </p>
+  </div>
+  <div id="descripcion" class="class-box mb-4">
+      <h3 class="section-heading">Descripción</h3>
+      <p>
+          Este sistema de gestión bibliotecaria está diseñado como una solución integral para las bibliotecas modernas, facilitando desde el registro y organización de recursos hasta la generación de reportes analíticos que respalden la toma de decisiones. 
+      </p>
+      <p>
+          El sistema incorpora funcionalidades avanzadas, tales como:
+      </p>
       <ul>
-        <li>Facilitar la gestión de préstamos y devoluciones.</li>
-        <li>Automatizar el inventario de libros y su disponibilidad.</li>
-        <li>Permitir la búsqueda eficiente de libros por categorías y autores.</li>
-        <li>Ofrecer un sistema accesible y fácil de usar para los bibliotecarios.</li>
+          <li>Registro automatizado de libros, autores y categorías.</li>
+          <li>Gestión de usuarios, incluyendo su historial de préstamos y devoluciones.</li>
+          <li>Sistema de búsqueda con filtros avanzados por palabras clave, autores y temas.</li>
+          <li>Generación de estadísticas en tiempo real para evaluar la eficiencia de los servicios.</li>
       </ul>
-    </div>
-  
-    <div id="alcance" class="mt-4">
-      <h3>Alcance</h3>
-      <p>El sistema cubrirá la gestión completa de libros, usuarios y préstamos en la biblioteca. No se incluye la gestión de recursos multimedia u otros tipos de recursos diferentes a libros en esta primera versión.</p>
-    </div>
-  </section>
+      <p>
+          Este diseño se sustenta en un análisis detallado de las operaciones bibliotecarias, incluyendo estudios de flujo de datos y diagramas UML como casos de uso y diagramas de clases.
+      </p>
+  </div>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-<p>Hecho por</p>
-</footer>
+  <div id="objetivos" class="class-box mb-4">
+      <h3 class="section-heading">Objetivos</h3>
+      <ul>
+          <li><strong>Desarrollar un sistema eficiente:</strong> Crear una solución tecnológica que automatice las operaciones cotidianas de las bibliotecas, ahorrando tiempo y recursos.</li>
+          <li><strong>Fomentar la accesibilidad:</strong> Diseñar interfaces gráficas intuitivas para facilitar el uso tanto por parte de los bibliotecarios como de los usuarios finales.</li>
+          <li><strong>Optimizar la búsqueda:</strong> Implementar herramientas de búsqueda avanzada que reduzcan los tiempos de consulta y mejoren la experiencia del usuario.</li>
+          <li><strong>Facilitar el análisis de datos:</strong> Generar reportes detallados para la toma de decisiones estratégicas.</li>
+          <li><strong>Asegurar la escalabilidad:</strong> Diseñar el sistema para que pueda adaptarse a las necesidades cambiantes y crecientes de las bibliotecas.</li>
+      </ul>
+  </div>
+
+  <div id="alcance" class="class-box mb-4">
+      <h3 class="section-heading">Alcance</h3>
+      <p>
+          El alcance del sistema incluye todas las operaciones relacionadas con la gestión de recursos bibliográficos, desde el registro y catalogación hasta el préstamo y devolución de libros. Entre las características principales se destacan:
+      </p>
+      <ul>
+          <li><strong>Gestión de Inventarios:</strong> Control completo de libros, revistas y artículos académicos, incluyendo disponibilidad y ubicación física.</li>
+          <li><strong>Préstamos y Devoluciones:</strong> Automatización del proceso, con alertas para recordar fechas límite.</li>
+          <li><strong>Consultas y Reportes:</strong> Acceso a estadísticas sobre uso de recursos, demografía de usuarios y patrones de consulta.</li>
+          <li><strong>Escalabilidad:</strong> Posibilidad de incorporar módulos adicionales en futuras versiones, como gestión de multimedia o integración con sistemas externos.</li>
+      </ul>
+      <p>
+          El sistema también incluye herramientas para evaluar la calidad del servicio con base en indicadores propuestos por estándares internacionales como ISO 11620.
+      </p>
+  </div>
+
+  <div  id="normas-iso" class="class-box mb-4">
+      <h3 class="section-heading">Normas ISO Aplicadas</h3>
+      <p>
+          Para garantizar la calidad, seguridad y eficiencia del sistema de gestión bibliotecaria, se han seguido estándares internacionales como:
+      </p>
+      <ul>
+          <li><strong>ISO 9001:</strong> Gestión de calidad en el diseño y desarrollo del sistema.</li>
+          <li><strong>ISO/IEC 25010:</strong> Evaluación de características como funcionalidad, usabilidad y seguridad.</li>
+          <li><strong>ISO/IEC 27001:</strong> Garantiza la protección de datos sensibles relacionados con usuarios y recursos.</li>
+          <li><strong>ISO 11620:</strong> Indicadores de calidad para medir la eficiencia y efectividad de los servicios bibliotecarios.</li>
+      </ul>
+  </div>
+</section>
+
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
 </body>
