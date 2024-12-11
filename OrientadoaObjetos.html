@@ -43,7 +43,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="marcoDropdown">
             <li><a class="dropdown-item" href="OrientadoaObjetos.html">Diagrama de Clases</a></li>
-            <li><a class="dropdown-item" href="OrientadoaObjetos.html#clases">Clases y Objetos</a></li>
+
             <li><a class="dropdown-item" href="CasosDeUso.html">Casos de Uso</a></li>
           </ul>
         </li>
@@ -53,15 +53,6 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="marcoDropdown">
             <li><a class="dropdown-item" href="Herramientas.html">Video</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="Herramientas.html" id="marcoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Conclusiones y recomendaciones
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="marcoDropdown">
-            <li><a class="dropdown-item" href="ConclusionyR.html#Conclu">Conclusión</a></li>
-            <li><a class="dropdown-item" href="ConclusionyR.html#reco">Recomendación</a></li>
           </ul>
         </li>
       </ul>
@@ -74,67 +65,66 @@
     <h1><strong>Diagrama de Clases</strong></h1>
   </div>
   <!-- Imagen con tamaño controlado -->
-  <img src="img/diagramaClases.png" alt="Diagrama de Clases" class="custom-image">
+  <img src="img/diagramadeClases.png" alt="Diagrama de Clases" class="custom-image">
 </section>  
 
-<!-- Sección de Clases -->
+
 <section id="clases" class="container my-5">
   <h2 class="text-center"><strong>Detalles de las Clases</strong></h2>
 
   <div class="class-box mb-4">
-    <h3 class="section-heading"><strong>Clase Persona</strong></h3>
-    <p><strong>Atributos:</strong> id, nombre, apellido, email</p>
-    <p><strong>Métodos:</strong> getId(), getNombre(), setNombre()</p>
+    <h3><strong>Clase Persona</strong></h3>
+    <p><strong>Atributos:</strong> <em>- id: int</em>, <em>- nombre: String</em>, <em>- apellido: String</em>, <em>- email: String</em></p>
+    <p><strong>Métodos:</strong> <em>+ getId(): int</em>, <em>+ getNombre(): String</em>, <em>+ setNombre(nombre: String): void</em>, <em>+ getEmail(): String</em>, <em>+ setEmail(email: String): void</em></p>
     <p><strong>Funcionalidad:</strong> Clase base de la que heredan Usuario y Bibliotecario.</p>
   </div>
 
   <div class="class-box mb-4">
-    <h3 class="section-heading"><strong>Clase Usuario (Extends Persona)</strong></h3>
-    <p><strong>Atributos:</strong> idusuario, historialPrestamos</p>
-    <p><strong>Métodos:</strong> ConsultarHistorial(), DevolverLibro(), SolicitarPrestamo()</p>
+    <h3><strong>Clase Usuario (Extiende Persona)</strong></h3>
+    <p><strong>Atributos:</strong> <em>- idUsuario: int</em>, <em>- historialPrestamos: ArrayList&lt;Prestamo&gt;</em></p>
+    <p><strong>Métodos:</strong> <em>+ consultarHistorial(): void</em>, <em>+ devolverLibro(libro: Libro): void</em>, <em>+ solicitarPrestamo(libro: Libro): void</em></p>
     <p><strong>Funcionalidad:</strong> Representa a los usuarios de la biblioteca y gestiona sus préstamos.</p>
   </div>
 
   <div class="class-box mb-4">
-    <h3 class="section-heading"><strong>Clase Bibliotecario (Extends Persona)</strong></h3>
-    <p><strong>Atributos:</strong> id_bibliotecario</p>
-    <p><strong>Métodos:</strong> ProcesarPrestamo(), ProcesarDevolucion(), GestionarCatalogo()</p>
-    <p><strong>Funcionalidad:</strong> Representa al personal que gestiona los préstamos, devoluciones y catálogo.</p>
+    <h3><strong>Clase Bibliotecario (Extiende Persona)</strong></h3>
+    <p><strong>Atributos:</strong> <em>- idBibliotecario: int</em></p>
+    <p><strong>Métodos:</strong> <em>+ procesarPrestamo(usuario: Usuario, libro: Libro): void</em>, <em>+ procesarDevolucion(usuario: Usuario, libro: Libro): void</em>, <em>+ gestionarCatalogo(): void</em></p>
+    <p><strong>Funcionalidad:</strong> Representa al personal que gestiona los préstamos, devoluciones y el catálogo.</p>
   </div>
 
   <div class="class-box mb-4">
-    <h3 class="section-heading"><strong>Clase Prestamo</strong></h3>
-    <p><strong>Atributos:</strong> fechaPrestamo, fechaDevolucionPrevista, fechaDevolucionReal, activo, USUARIO, LIBRO</p>
-    <p><strong>Métodos:</strong> calcularMulta(), extenderPrestamo(), finalizacion()</p>
-    <p><strong>Funcionalidad:</strong> Gestiona la información y el estado de cada préstamo en la biblioteca.</p>
+    <h3><strong>Clase Notificacion</strong></h3>
+    <p><strong>Atributos:</strong> <em>- idNotificacion: int</em>, <em>- mensaje: String</em>, <em>- fecha: Date</em>, <em>- tipo: String</em> (Recibido, Mulla, Información General)</p>
+    <p><strong>Métodos:</strong> <em>+ enviarNotificacion(usuario: Usuario): void</em></p>
+    <p><strong>Funcionalidad:</strong> Se encarga de enviar notificaciones a los usuarios.</p>
   </div>
 
   <div class="class-box mb-4">
-    <h3 class="section-heading"><strong>Clase Libro</strong></h3>
-    <p><strong>Atributos:</strong> idLibro, titulo, autor, editorial, año, disponible</p>
-    <p><strong>Métodos:</strong> estaDisponible()</p>
+    <h3><strong>Clase Prestamo</strong></h3>
+    <p><strong>Atributos:</strong> <em>- idPrestamo: int</em>, <em>- fechaPrestamo: Date</em>, <em>- fechaDevolucionPrevista: Date</em>, <em>- fechaDevolucionReal: Date</em>, <em>- activo: boolean</em>, <em>- usuario: Usuario</em>, <em>- libro: Libro</em></p>
+    <p><strong>Métodos:</strong> <em>+ calcularMulta(): double</em>, <em>+ extenderPrestamo(dias: int): void</em>, <em>+ finalizar(): void</em></p>
+    <p><strong>Funcionalidad:</strong> Gestiona el préstamo, cálculo de multa y devolución del libro.</p>
+  </div>
+
+  <div class="class-box mb-4">
+    <h3><strong>Clase Libro</strong></h3>
+    <p><strong>Atributos:</strong> <em>- idLibro: int</em>, <em>- titulo: String</em>, <em>- autor: String</em>, <em>- editorial: String</em>, <em>- año: int</em>, <em>- disponible: boolean</em></p>
+    <p><strong>Métodos:</strong> <em>+ getTitulo(): String</em>, <em>+ estaDisponible(): boolean</em></p>
     <p><strong>Funcionalidad:</strong> Contiene la información del libro y su disponibilidad.</p>
   </div>
 
   <div class="class-box mb-4">
-    <h3 class="section-heading"><strong>Clase Almacen (Catalogo)</strong></h3>
-    <p><strong>Atributos:</strong> libros (array de objetos Libro)</p>
-    <p><strong>Métodos:</strong> agregarLibro(), eliminarLibro(), verificarDisponibilidad(idLibro), buscarPorIdLibro(), buscarPorTitulo(), listarDisponibles()</p>
-    <p><strong>Funcionalidad:</strong> Gestiona el catálogo completo de la biblioteca.</p>
+    <h3><strong>Clase Almacen (Catalogo)</strong></h3>
+    <p><strong>Atributos:</strong> <em>- libros: ArrayList&lt;Libro&gt;</em></p>
+    <p><strong>Métodos:</strong> <em>+ agregarLibro(libro: Libro): void</em>, <em>+ eliminarLibro(libro: Libro): void</em>, <em>+ verificarDisponibilidad(idLibro: int): boolean</em>, <em>+ buscarPorIdLibro(idLibro: int): Libro</em>, <em>+ listarDisponibles(): ArrayList&lt;Libro&gt;</em></p>
+    <p><strong>Funcionalidad:</strong> Gestiona el catálogo de libros, permitiendo agregar, eliminar y verificar disponibilidad.</p>
   </div>
 
   <div class="class-box mb-4">
-    <h3 class="section-heading"><strong>FUNCIONALIDAD GENERAL DEL SISTEMA</strong></h3>
-    <p>Este sistema permite a la biblioteca gestionar usuarios, bibliotecarios, préstamos y 
-      su catálogo de libros. Los usuarios pueden solicitar préstamos y devolver libros, y el 
-      bibliotecario puede aprobar o procesar esos préstamos y devoluciones. Además, el 
-      bibliotecario tiene la función de mantener actualizado el catálogo, 
-      permitiendo agregar o eliminar libros y verificar su disponibilidad. 
-      El sistema facilita la organización de los libros y asegura que los usuarios tengan 
-      acceso a sus historiales y a libros disponibles para préstamo.</p>
+    <h3><strong>FUNCIONALIDAD GENERAL DEL SISTEMA</strong></h3>
+    <p>Este sistema gestiona usuarios, bibliotecarios, préstamos y el catálogo de libros. Los usuarios pueden solicitar préstamos, devolver libros y recibir notificaciones, mientras que los bibliotecarios gestionan los préstamos, devoluciones y el catálogo.</p>
   </div>
-
-
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
